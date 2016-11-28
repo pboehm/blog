@@ -1,0 +1,75 @@
++++
+layout = "post"
+title = "Centos 6.0: Problem mit Intel-NICs und dem Treiber e1000e"
+date = "2012-12-31"
+
++++
+
+>
+> Dieser Artikel wurde von [tuxorials.de](http://tuxorials.de) (Dokuwiki) hierher migriert!
+> Mögliche Darstellungsfehler bitte ich zu entschuldigen.
+>
+
+
+Als ich das aktuelle [CentOS](http://centos.org "http://centos.org"),
+ein Nachbau von [Redhat](http://redhat.com "http://redhat.com")
+Enterprise Linux (RHEL), auf einigen halbwegs aktuellen HP-Workstations
+installieren wollte, kam es zu Problemen mit den verbauten Intel
+Gigabit-NICs (82566DM), welches den Aufbau einer Netzwerk-Verbindung
+verhinderte. Das Mysteriöse an diesem Fehler war die Tatsache, dass er
+nur auftrat, wenn die Workstations an einem FastEthernet-Switch hingen.
+Bei direkten Anschluss an einem Gigabit-Switch trat dieses Problem nicht
+auf und es konnte dort problemlos eine Verbindung hergestellt werden.
+Eine tiefgreifende Beschreibung des Problems, sowie eine Lösung für
+dieses Problem liefert dieser Beitrag.
+
+Ein `lspci` lieferte auf den Workstations folgendes Ergebnis:
+
+```
+00:00.0 Host bridge: Intel Corporation 82Q963/Q965 Memory Controller Hub (rev 02)
+00:02.0 VGA compatible controller: Intel Corporation 82Q963/Q965 Integrated Graphics Controller (rev 02)
+00:03.0 Communication controller: Intel Corporation 82Q963/Q965 HECI Controller (rev 02)
+00:19.0 Ethernet controller: Intel Corporation 82566DM Gigabit Network Connection (rev 02)
+00:1a.0 USB Controller: Intel Corporation 82801H (ICH8 Family) USB UHCI Controller #4 (rev 02)
+......
+```
+
+Ein Blick in die Datei `/var/log/messages` förderte zahlreiche Meldungen
+durch den Treiber `e1000e` zu Tage, welche nachfolgend auszugsweise
+dargestellt sind:
+
+```
+Aug 15 15:13:29 agent31 kernel: e1000e: Intel(R) PRO/1000 Network Driver - 1.2.7-k2
+Aug 15 15:13:29 agent31 kernel: e1000e: Copyright (c) 1999 - 2009 Intel Corporation.
+Aug 15 15:13:29 agent31 kernel: e1000e 0000:00:19.0: PCI INT B -> GSI 19 (level, low) -> IRQ 19
+Aug 15 15:13:29 agent31 kernel: e1000e: eth0 NIC Link is Up 100 Mbps Full Duplex, Flow Control: RX/TX
+Aug 15 15:13:29 agent31 kernel: e1000e: eth0 NIC Link is Down
+Aug 15 15:13:29 agent31 kernel: e1000e: eth0 NIC Link is Up 100 Mbps Full Duplex, Flow Control: RX/TX
+Aug 15 15:13:29 agent31 kernel: e1000e: eth0 NIC Link is Down
+Aug 15 15:13:29 agent31 kernel: e1000e: eth0 NIC Link is Up 100 Mbps Full Duplex, Flow Control: RX/TX
+Aug 15 15:13:29 agent31 kernel: e1000e: eth0 NIC Link is Down
+Aug 15 15:13:29 agent31 kernel: e1000e: eth0 NIC Link is Up 100 Mbps Full Duplex, Flow Control: RX/TX
+......
+```
+
+Diese Meldungen passen zu dem Verhalten, der an der NIC verbauten LEDs,
+welche ein rhythmisches Wechseln zwischen orange und grün vollziehen.
+Nach einer ausführlichen Recherche und dem Booten eines
+[Fedora](http://fedoraproject.org "http://fedoraproject.org") 15, wo das
+Problem nicht auftritt, konnte es nur an der eingesetzten Version des
+`e1000e`-Treibers liegen. Wenn man dann auch noch die Tatsache beachtet,
+dass der Kernel 2.6.32 als Basis für RHEL6 und alle seine Derivate
+dient, ist dies noch warscheinlicher.
+
+Das [ELRepo-Projekt](http://elrepo.org "http://elrepo.org") stellt
+einige Pakete mit aktuellen Treibern für RHEL-kompatible Distributionen
+bereit, darunter auch einen aktuellen `e1000e`. Folgende Befehle binden
+das Repository ein und installieren dann den entsprechenden `kmod`.
+
+```
+rpm -Uvh http://elrepo.org/elrepo-release-6-4.el6.elrepo.noarch.rpm
+yum -y install kmod-e1000e
+```
+
+Nach einem Reboot sollte die neue Version des `e1000e` benutzt werden
+und dementsprechend das oben beschriebene Problem nicht mehr auftreten.

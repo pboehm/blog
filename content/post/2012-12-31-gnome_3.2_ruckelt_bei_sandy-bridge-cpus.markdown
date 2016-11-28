@@ -1,0 +1,28 @@
++++
+layout = "post"
+title = "Gnome 3.2 ruckelt bei Sandy-Bridge-CPUs"
+date = "2012-12-31"
+
++++
+
+>
+> Dieser Artikel wurde von [tuxorials.de](http://tuxorials.de) (Dokuwiki) hierher migriert!
+> Mögliche Darstellungsfehler bitte ich zu entschuldigen.
+>
+
+
+Eine Sache die mich bei meinem neuen Thinkpad T520 unter Fedora 16
+gestört hat, war das leichte Ruckeln der Fenster beim Verschieben, sowie
+ein leichter Bildversatz beim Schauen von Videos. Da dies im
+Fallback-Mode nicht auftritt muss dies an der Gnome-Shell liegen und
+nach etwas Recherche lieferte folgender 
+[Forenbeitrag die Lösung](http://www.fedoraforum.org/forum/showpost.php?p=1541459&postcount=9 "http://www.fedoraforum.org/forum/showpost.php?p=1541459&postcount=9").
+
+Folgende Zeilen müssen in die, noch zu erstellende, Datei
+`/etc/environment` eingetragen werden und nachfolgend muss die
+Gnome-Shell neugestartet werden:
+
+```
+CLUTTER_PAINT=disable-clipped-redraws:disable-culling
+CLUTTER_VBLANK=True
+```
