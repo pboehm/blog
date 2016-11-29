@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "Gnome 3: tracker deaktivieren"
 date = "2012-12-31"

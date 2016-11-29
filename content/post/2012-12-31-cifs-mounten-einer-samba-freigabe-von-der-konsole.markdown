@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "cifs: Mounten einer Samba-Freigabe von der Konsole"
 date = "2012-12-31"

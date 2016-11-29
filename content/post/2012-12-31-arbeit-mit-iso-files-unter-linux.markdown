@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "Arbeit mit iso-Files unter Linux"
 date = "2012-12-31"

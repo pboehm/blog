@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "Canon Pixma MP210 unter Fedora"
 date = "2012-12-31"

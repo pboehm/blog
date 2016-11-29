@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "Fedora: Installierte Pakete übertragen"
 date = "2012-12-31"

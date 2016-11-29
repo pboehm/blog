@@ -12,7 +12,6 @@ canonifyurls = true
 
 [taxonomies]
   tag = "tags"
-  category = "categories"
   archive = "archives"
 
 [author]
@@ -21,10 +20,10 @@ canonifyurls = true
   job = "Software developer"
   location = "Rostock ⋅ Germany"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  gravatar_email = "philipp@pboehm.org"
+  gravatar_email = ""
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatar` is filled
-  picture = ""
+  picture = "/images/user_image.jpg"
   # Your Twitter username without the @. E.g : thibaudlepretre
   twitter = "phboehm"
   # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
@@ -37,12 +36,6 @@ canonifyurls = true
   name = "Home"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-home\"></i>"
   url = "/"
-[[menu.main]]
-  weight = 1
-  identifier = "categories"
-  name = "Categories"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-bookmark\"></i>"
-  url = "/categories"
 [[menu.main]]
   weight = 2
   identifier = "tags"

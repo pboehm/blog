@@ -2,7 +2,7 @@
 layout = "post"
 title = "git: simple but powerful workflow"
 date = "2013-03-31"
-
+tags = ["devops", "development", "git", "vcs", "workflow", "team"]
 +++
 
 `git` the distributed version control system built for the Linux kernel is widely used
@@ -36,7 +36,7 @@ The workflow is implemented as a shell-alias and a shell-function which should
 work in both `zsh` and `bash`. To install it, copy the following lines into
 your `~/.[bash|zsh]rc` and start a new shell-session.
 
-{% gist 5282061 %}
+{{< gist pboehm 5282061 >}}
 
 __The workflow in action__
 

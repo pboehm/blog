@@ -2,7 +2,6 @@
 layout = "post"
 title = 'git commit -am "Initial commit"'
 date = "2013-01-20"
-
 +++
 
 My plan with this blog is, to write about several things I'm interested in. Some of my ideas are:

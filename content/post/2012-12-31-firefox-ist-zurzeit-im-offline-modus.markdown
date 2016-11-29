@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "Firefox ist zurzeit im Offline-Modus"
 date = "2012-12-31"

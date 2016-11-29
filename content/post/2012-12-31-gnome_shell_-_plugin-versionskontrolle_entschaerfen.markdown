@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "Gnome Shell - Plugin-Versionskontrolle entschärfen"
 date = "2012-12-31"

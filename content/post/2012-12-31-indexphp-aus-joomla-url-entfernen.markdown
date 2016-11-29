@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "index.php aus Joomla-URL entfernen"
 date = "2012-12-31"

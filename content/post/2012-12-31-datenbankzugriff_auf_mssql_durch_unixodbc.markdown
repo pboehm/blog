@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "Datenbank-Zugriff auf Microsoft SQL-Server von Linux"
 date = "2012-12-31"

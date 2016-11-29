@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "apt: Kernel Pakete werden zurückgehalten"
 date = "2012-12-31"

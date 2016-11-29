@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "PDF-Dateien von Passwörtern befreien"
 date = "2012-12-31"

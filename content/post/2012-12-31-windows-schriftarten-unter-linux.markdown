@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "Windows Schriftarten unter Linux"
 date = "2012-12-31"

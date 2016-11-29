@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "ssh: PublicKey-Authentifizierung"
 date = "2012-12-31"

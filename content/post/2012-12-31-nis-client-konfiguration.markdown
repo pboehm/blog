@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "NIS: Client-Konfiguration"
 date = "2012-12-31"

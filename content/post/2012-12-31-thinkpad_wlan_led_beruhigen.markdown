@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "Thinkpad WLAN LED beruhigen"
 date = "2012-12-31"

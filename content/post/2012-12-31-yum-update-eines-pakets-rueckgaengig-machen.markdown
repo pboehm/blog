@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "yum: Update eines Pakets rückgängig machen"
 date = "2012-12-31"

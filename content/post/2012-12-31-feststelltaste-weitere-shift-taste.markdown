@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "Feststelltaste = weitere SHIFT-Taste"
 date = "2012-12-31"

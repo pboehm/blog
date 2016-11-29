@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "Gnome Shell friert durch Anstecken von externen Monitor ein"
 date = "2012-12-31"

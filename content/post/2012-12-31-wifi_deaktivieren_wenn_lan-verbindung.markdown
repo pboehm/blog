@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "Wifi deaktivieren wenn LAN-Verbindung besteht"
 date = "2012-12-31"

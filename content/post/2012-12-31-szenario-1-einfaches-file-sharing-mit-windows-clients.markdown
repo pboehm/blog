@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "Szenario 1: einfaches File-Sharing mit Windows-Clients"
 date = "2012-12-31"

@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "Playstation 3 Eye Microfon unter Fedora 17 benutzen"
 date = "2012-12-31"

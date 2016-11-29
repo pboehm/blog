@@ -2,8 +2,9 @@
 layout = "post"
 title = "Extracting field names from Django model instance"
 date = "2013-02-05"
-
+tags = ["development", "django", "python", "migration", "db", "data", "etl"]
 +++
+
 In Django you will normally work with forms and models. A form instance holds
 a reference (`form_instance.fields`) to his corresponding fields as a `dict`.
 On model instances this `dict` does not exist. This post describes a solution.

@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "Beiträge in DokuWiki mit vim schreiben"
 date = "2012-12-31"

@@ -2,7 +2,7 @@
 layout = "post"
 title = "Method Injection in Python"
 date = "2013-01-26"
-
+tags = ["development", "python", "meta programming", "german"]
 +++
 
 Als ersten Beitrag im Blog, gleich mal ein recht interessantes Thema, nämlich

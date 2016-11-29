@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "WLAN-Accesspoint mit hostapd"
 date = "2012-12-31"

@@ -2,6 +2,7 @@
 layout = "post"
 title = "Replacing multiple Vagrant VMs with LXC containers"
 date = "2014-12-19"
+tags = ["devops", "vagrant", "lxc", "virtualbox", "development", "deployment"]
 
 +++
 

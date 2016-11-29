@@ -1,8 +1,9 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "deb-Paket bauen"
 date = "2012-12-31"
-
 +++
 
 >
@@ -46,12 +47,12 @@ Um ein Debian-Paket zu bauen, muss eine ganz bestimmte Hierarchie an
 Ordnern und Dateien vorhanden sein, welche folgend aufgelistet ist.
 
 ```
-/home/philipp/updatepackage/ 
-|-- DEBIAN 
-|   |-- control 
-|   |-- postinst 
-|   |-- preinst 
-|   `-- prerm 
+/home/philipp/updatepackage/
+|-- DEBIAN
+|   |-- control
+|   |-- postinst
+|   |-- preinst
+|   `-- prerm
  `-- etc  
  `   `-- init.d  
  `       `-- upd_client.sh
@@ -79,14 +80,14 @@ dabei nach dem Kopieren der Dateien, `preinst` vor dem Kopieren und
 *Nachfolgend ist ein Beispiel für eine DEBIAN/control Datei abgebildet:*
 
 ```
-Package: updatepackage 
-Version: 0.0.13 
-Section: admin 
-Priority: optional 
-Architecture: all 
-Essential: no 
-Depends: zsh 
-Installed-Size: 10KB 
+Package: updatepackage
+Version: 0.0.13
+Section: admin
+Priority: optional
+Architecture: all
+Essential: no
+Depends: zsh
+Installed-Size: 10KB
 Maintainer: Philipp Böhm
 Description: Paket, welches die Clients automatisiert beim Start aktualisiert
 ```
@@ -99,13 +100,13 @@ beschrieben werden.
 aufgelistet:*
 
 ```
-#!/bin/sh 
-# 
+#!/bin/sh
+#
 # Script, welches nach dem Kopieren/Installieren der  
 # eigentlichen Daten ausgeführt wird, um Konfigurationen  
 # durchzuführen. Es ist aber auch der Ort um jegliche  
-# Befehle zur Konfiguration der Clients durchzuführen. 
-# 
+# Befehle zur Konfiguration der Clients durchzuführen.
+#
 set -e  
 
 if [ "$1" = "configure" ]  then
@@ -113,7 +114,7 @@ if [ "$1" = "configure" ]  then
   if [ -e /etc/init.d/upd_client.sh ]  
   then  
     /usr/sbin/update-rc.d upd_client.sh start 40 2 3 4 5 . stop 20 0 1 6 .  
-  fi 
+  fi
 fi
 ```
 

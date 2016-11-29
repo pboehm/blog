@@ -2,6 +2,7 @@
 layout = "post"
 title = "Building a small Web Redirector using Nginx"
 date = "2014-02-22"
+tags = ["web", "web server", "nginx", "deployment"]
 +++
 
 When you own a custom domain like me (`pboehm.org`), there are unlimited

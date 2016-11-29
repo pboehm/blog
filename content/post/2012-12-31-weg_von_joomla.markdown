@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "Umstieg von Joomla auf DokuWiki"
 date = "2012-12-31"

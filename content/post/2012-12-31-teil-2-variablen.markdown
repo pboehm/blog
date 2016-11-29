@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "Teil 2: Variablen"
 date = "2012-12-31"

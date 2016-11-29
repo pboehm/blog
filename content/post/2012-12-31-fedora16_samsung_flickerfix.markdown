@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "Fedora 16 Samsung-Laptop Display-Flackern entfernen"
 date = "2012-12-31"

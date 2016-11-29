@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "passwd: Passwort setzen per Shell-Script"
 date = "2012-12-31"

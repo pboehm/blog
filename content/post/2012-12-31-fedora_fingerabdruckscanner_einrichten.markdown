@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "Fedora: Fingerabdruckscanner einrichten"
 date = "2012-12-31"

@@ -2,6 +2,8 @@
 layout = "post"
 title = "Authentication for WebSockets"
 date = "2014-07-19"
+tags = ["web", "web server", "webshell", "nginx", "websocket", "lua", "deployment"]
+
 
 +++
 

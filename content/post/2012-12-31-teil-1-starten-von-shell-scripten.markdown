@@ -1,4 +1,6 @@
 +++
+
+tags = ["tuxorials", "german"]
 layout = "post"
 title = "Teil 1: Starten von Shell-Scripten"
 date = "2012-12-31"
