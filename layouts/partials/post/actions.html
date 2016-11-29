@@ -1,3 +1,4 @@
+{{ if not (isset .Params "noactions" )}}
 <div class="post-actions-wrap">
   <nav>
     <ul class="post-actions post-action-nav">
@@ -23,6 +24,7 @@
       </li>
     </ul>
   </nav>
+
   <ul class="post-actions post-action-share">
     <li class="post-action hide-lg hide-md hide-sm">
       <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
@@ -62,4 +64,4 @@
     </li>
   </ul>
 </div>
-
+{{ end }}
