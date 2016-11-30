@@ -147,6 +147,9 @@ canonifyurls = true
   # and set `autoThumbnailImage` to `false` on a post to overwrite this setting
   auto_thumbnail_image = true
 
+  googleAnalytics = "UA-38006232-1"
+
+
   # Header configuration
   # The link at the right of the header is customizable
   # You can add a link (as an icon) at the right of the header instead of the author's gravatar image or author's picture.
