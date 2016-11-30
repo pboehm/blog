@@ -3,6 +3,7 @@ title = "Open Source Projects"
 draft = false
 nodate = true
 noactions = true
+nocomments = true
 +++
 
 <div class="github-card" data-github="pboehm/ddns" data-width="400" data-height="153" data-theme="default"></div>

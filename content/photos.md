@@ -3,6 +3,7 @@ title = "Latest Photos"
 draft = false
 nodate = true
 noactions = true
+nocomments = true
 gallery = [
   "https://farm6.staticflickr.com/5795/30417357390_f7f9507749_z.jpg",
   "https://farm6.staticflickr.com/5344/30571316472_99dfa62589_z.jpg",
