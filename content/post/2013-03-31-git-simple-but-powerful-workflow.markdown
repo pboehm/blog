@@ -13,7 +13,7 @@ feature branches on which the developer implements their changes. The
 `master`-branch tracks the remote changes and the feature branch will be merged
 into `master` if the work is done.
 
-<!-- more -->
+<!--more-->
 
 __The workflow requires the following steps:__
 

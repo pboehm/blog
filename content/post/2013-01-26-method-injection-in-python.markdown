@@ -10,7 +10,7 @@ das dynamische Hinzufügen von Methoden zu bestehenden Klassen. Warum man das
 machen möchte und verschiedene Möglichkeiten dies umzusetzen, beschreibt dieser
 Beitrag.
 
-<!-- more -->
+<!--more-->
 
 ## Warum?
 

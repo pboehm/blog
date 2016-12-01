@@ -12,7 +12,7 @@ or Github. Another purpose could be the redirection of `www.DOMAIN` and
 `DOMAIN` to `blog.DOMAIN`, which could be hosted on Github Pages that is
 limited to one CNAME per page.
 
-<!-- more -->
+<!--more-->
 
 ### DNS settings
 

@@ -9,7 +9,7 @@ In Django you will normally work with forms and models. A form instance holds
 a reference (`form_instance.fields`) to his corresponding fields as a `dict`.
 On model instances this `dict` does not exist. This post describes a solution.
 
-<!-- more -->
+<!--more-->
 
 ## Every model instance has a Meta class instance
 
