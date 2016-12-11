@@ -1,8 +1,7 @@
 +++
 title = "SSH Features: Bridging two networks"
 date = "2016-12-07T22:49:59+01:00"
-draft = true
-tags = ["devops", "ssh", "ethernet", "bridging"]
+tags = ["devops", "ssh", "ethernet", "bridging", "osi"]
 +++
 
 There are many cases where two networks have to be connected on Layer 2 in a
@@ -61,13 +60,15 @@ as root only using public key authentication.
 root » ssh -o Tunnel=ethernet -w 5:5 -t root@REMOTE_HOST
 ```
 
-After executing this command with successful authentication on each side of
-the tunnel a device called `tap5` is created, which works but is in down state.
+After executing this command with successful authentication a device called
+`tap5` is created on each side of the tunnel, which works but the interface
+are shut down. The argument `-w X:Y` specifies which device numbers should
+be used on the local and remote side.
 
 ## Configuring bridge interfaces using systemd-networkd
 
-`tap`-Devices are not that useful without being attached to a real network
-interface. Thats the reason why they are normally attached to a bridge
+`tap`-devices are not that useful without being attached to a real network
+interface. That's the reason why they are normally attached to a bridge
 interface on each side. Setting up bridge interfaces is usually done using
 the `brctl` command provided by the `bridge-utils` package. For distributions
 using `systemd` and its network daemon the following two config files
@@ -101,7 +102,18 @@ root » brctl addif br-remote tap5
 
 ## Putting it all together
 
-After the initial tunnel using SSH, the
+Because the simple SSH command described above requires some additional commands
+to be executed on both sides of the tunnel it would be cool to join these
+commands in a single command executed on the client.
+
+A well known feature of SSH is that the first real argument to the ssh command is
+treated as a command that is executed on the remote side after setting up the
+tunnel. A lesser known feature is that this also exists for the local
+side through the `LocalCommand` option which executes a command on the local
+side after setting up the SSH tunnel.
+
+The following command assumes that a bridge interface `br-local` exists on
+the local side while `br-remote` exists on the remote side:
 
 {{< codeblock >}}
 root » ssh -o "PermitLocalCommand=yes" \
