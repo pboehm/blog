@@ -2,6 +2,7 @@
 title = "SSH Features: Bridging two networks"
 date = "2016-12-07T22:49:59+01:00"
 tags = ["devops", "ssh", "ethernet", "bridging", "osi"]
+draft = false
 +++
 
 There are many cases where two networks have to be connected on Layer 2 in a
