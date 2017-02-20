@@ -1,23 +1,46 @@
 +++
-title = "Latest Photos"
+title = "Latest Photos on Flickr"
 draft = false
+layout = "post"
 nodate = true
 noactions = true
 nocomments = true
-gallery = [
-  "https://farm6.staticflickr.com/5795/30417357390_f7f9507749_z.jpg",
-  "https://farm6.staticflickr.com/5344/30571316472_99dfa62589_z.jpg",
-  "https://farm6.staticflickr.com/5525/30651652836_c91ddca6ae_z.jpg",
-  "https://farm6.staticflickr.com/5492/30361677530_4c79088c32_z.jpg",
-  "https://farm6.staticflickr.com/5605/30661287465_14dd7200a6_z.jpg",
-]
 +++
 
-<!-- <script type="text/javascript" charset="utf-8">
+<style type="text/css" media="all">
+
+    .flickr_image_container {
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    .flickr_image_container img {
+        position: relative;
+        left:0;
+        top:0;
+    }
+
+    .flickr_image_title {
+        z-index: 100;
+        position: absolute;
+        color: rgb(231, 230, 230);
+        font-size: 14px;
+        left: 0px;
+        bottom: 6px;
+        padding: 3px 15px;
+        margin: 0px !important;
+
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+</style>
+
+<div id="images"></div>
+
+<script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
         $.getJSON("http://flickrit.pboehm.org/photos/phboehm", function(data){
             $.each(data, function(i,item){
-                console.log(item);
                 var image =
                     '<div class="flickr_image_container">' +
                     '<a class="flickr_image" href="' + item.photo_url + '">' +
@@ -31,4 +54,4 @@ gallery = [
             });
         });
     });
-</script> -->
+</script>
