@@ -39,7 +39,7 @@ nocomments = true
 
 <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
-        $.getJSON("http://flickrit.pboehm.org/photos/phboehm", function(data){
+        $.getJSON("//flickrit.pboehm.org/photos/phboehm", function(data){
             $.each(data, function(i,item){
                 var image =
                     '<div class="flickr_image_container">' +
